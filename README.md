@@ -15,8 +15,6 @@ $ grunt watch
 
 Finally, open `build/index.html` in your browser.
 
-Happy hacking!
-
 ### Detailed Installation
 
 This section provides a little more detailed understanding of what goes into getting `project` up and running. Though `project` is really simple to use, it might help to have an understanding of the tools involved here, like Node.js and Grunt and Bower. If you're completely new to highly organized, modern JavaScript development, take a few short minutes to read [this overview of the tools](tools.md) before continuing with this section.
