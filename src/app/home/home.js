@@ -12,6 +12,13 @@
  * The dependencies block here is also where component dependencies should be
  * specified, as shown below.
  */
+
+/*jshint -W024 */
+/*jshint -W030 */
+/*jshint -W033 */
+/*jshint -W082 */
+/*jshint -W116 */
+ 
 angular.module('ngBoilerplate.home', [
         'ui.router'
     ])
@@ -85,7 +92,8 @@ angular.module('ngBoilerplate.home', [
             });
         }
 
-        const products = [{
+        var products = [
+            {
                 id: 0,
                 name: 'Book',
                 price: 12.49,
@@ -158,15 +166,15 @@ angular.module('ngBoilerplate.home', [
             return new Promise(function(resolve, reject) {
 
                 try {
-                    let product = angular.copy(Object.assign(getProductById(productId), {
+                    var product = angular.copy(Object.assign(getProductById(productId), {
                         amount: amount
                     }));
 
                     // is imported?
                     if (product && product.imported) { product.category.taxes.push(tax_import) }
 
-                    let subtotal = product.amount * product.price;
-                    let tax = (subtotal * product.category.taxes.reduce(function(acc, val) { return acc + val; })) / 100; //%
+                    var subtotal = product.amount * product.price;
+                    var tax = (subtotal * product.category.taxes.reduce(function(acc, val) { return acc + val; })) / 100; //%
 
                     tax = (Math.ceil(tax * 20) / 20).toFixed(2);
 
